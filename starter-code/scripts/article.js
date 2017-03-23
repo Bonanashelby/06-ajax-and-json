@@ -58,7 +58,6 @@ Article.fetchAll = function() {
     .then(function(data){
       localStorage.rawData = JSON.stringify(data);
       Article.loadAll(data);
-      console.log(Article.all);
       articleView.initIndexPage();
     }, function(err){
       console.error(err);
